@@ -1,0 +1,96 @@
+/* Projects Page Specific Styles */
+
+.projects {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f4f4f9;
+}
+
+.projects h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.projects p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+/* Grid layout for project cards */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 projects per row */
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Crop image to fit card */
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.project-card img {
+    width: 100%; /* Full width of the card */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Crop image within the card */
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+.project-card p {
+    padding: 0 15px 15px;
+    color: #333;
+    font-size: 1rem;
+}
+
+.project-card a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #007acc;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.project-card a:hover {
+    background-color: #005a99; /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects h1 {
+        font-size: 2rem;
+    }
+
+    .projects p {
+        font-size: 1rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Stack projects in a single column */
+    }
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
