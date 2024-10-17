@@ -43,6 +43,16 @@
     color: #fff;
 }
 
+.social-media svg{
+    width: 30px;
+    padding: 10px 20px;
+    transition: transform 0.3s ease;
+}
+
+.social-media svg:hover{
+    transform: scale(1.5);
+}
+
 .about-section {
     padding: 20px 0px 50px 0px;
     background-color: #000000;
