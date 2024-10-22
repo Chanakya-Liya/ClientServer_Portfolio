@@ -19,14 +19,33 @@
 .profile {
     margin: auto auto auto 7%;
     text-align: center;
+    transition: transform 0.5s ease;
 }
 
-.profile img {
+.profile .profile-image:hover{
+    transform: rotateY(180deg);
+    background-image: url(../Static/flip\ photo.png);
+}
+
+.profile .profile-image {
+    background-image: url(../Static/New\ Project.png);
     width: 400px;
     height: 400px;
+    background-size: cover;
+    background-position: top;
     object-fit: cover;
     object-position: top;
+    transition: transform 0.3s ease, background-image 0.1s ease;
 }
+
+.profile figcaption {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    color: #FFF;
+    margin-top: 10px;
+}
+
 
 .achievements{
     color: black;
@@ -55,12 +74,10 @@
 
 .achievements td:hover .description{
     display: block;
-    text-align: left;
-    opacity: 100;
+    text-align: center;
 }
 
 .achievements td:hover .specs h1, .achievements td:hover .achievement{
-    transform: translateX(20000px);
     display: none;
 }
 
@@ -79,54 +96,50 @@
 .description{
     display: none; 
     width: 20vw;
-    opacity: 0;
     padding: auto;
     margin: auto;
     
 }
 
 
-.profile figcaption {
-    font-size: 1.2rem;
-    color: #FFF;
-    margin-top: 10px;
-}
+/* end of hero section */
 
 .skills {
-    background-color: #333;
+    background-color: #000000;
     color: white;
     padding: 50px 0;
     text-align: center;
 }
 
 .skills h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 20px;
+    transition: color 0.3s ease;
 }
 
-/* Flexbox layout for skill rows */
+.skills h2:hover {
+    color: #019ea9;
+}
+
 .skills-row {
     display: flex;
     justify-content: space-around;
     margin-bottom: 30px;
 }
 
-/* Skill Progress Bar Container */
 .skill {
     width: 45%;
     text-align: left;
 }
 
-/* Skill label positioned above the progress bar */
 .skill label {
     display: block;
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
-/* Progress Bar Styling */
 .progress-bar {
-    background-color: #555;
+    background-color: #ffffff;
     border-radius: 20px;
     overflow: hidden;
     height: 25px;
@@ -135,13 +148,28 @@
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-.progress {
-    background-color: #ff5722;
-    height: 100%;
-    transition: width 0.5s ease;
+.progress-percentage{
+    opacity: 0;
+    color: rgb(255, 255, 255);
+    font-size: large;
+    text-align: right;
+    padding: 0 20px;
+    transition: opacity 0.3s ease-in;
 }
 
-/* Responsive Design */
+.progress {
+    background-color: #019ea9;
+    height: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.progress:hover{
+    background-color: #3e8f97;
+}
+
+.skill:hover .progress-percentage{
+    opacity: 1;
+}
 
 @media (max-width: 1300px) {
     .info{
@@ -156,9 +184,10 @@
         height: auto;
     }
 
-    .profile img {
+    .profile .profile-image {
         width: 300px;
         height: 300px;
+        margin: auto;
     }
 
     .achievements{
@@ -181,20 +210,25 @@
     .achievements{
         border-spacing: 4vw 2vw;
     }
+
+    .progress-percentage{
+        opacity: 1;
+    }
 }
 
 
 @media (max-width: 768px) {
     .skills-row {
-        flex-direction: column;
+        /* flex-direction: column; */
+        margin: auto 5%;
     }
 
     .skill {
         width: 100%;
-        margin-bottom: 20px;
+        margin: 10px 10px;
     }
 
-    .profile img {
+    .profile .profile-image {
         width: 250px;
         height: 250px;
     }
