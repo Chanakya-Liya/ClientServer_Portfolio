@@ -1,5 +1,3 @@
-/* About Page Specific Styles */
-
 .about {
     text-align: center;
     padding: 50px 0;
@@ -16,15 +14,11 @@
 
 .info{
     display: flex;
-    background-color: pink;
 }
 
-/* Profile section styling */
 .profile {
-    margin: auto auto;
+    margin: auto auto auto 7%;
     text-align: center;
-    background-color: #ff5722;
-
 }
 
 .profile img {
@@ -38,13 +32,13 @@
     color: black;
     margin-right: auto;
     margin: 100px auto;
-    background-color: #a70303;
     border-spacing: 3vw 1vw;
     table-layout: fixed;
 }
 
 .achievements tr{
     margin: 20px;
+    transition: transform 3s ease;
 }
 
 .achievements td{
@@ -52,23 +46,45 @@
     padding: 0;
     background-color: aqua;
     border-radius: 20px;
+    transition: transform 0.3s ease;
 } 
 
-.specs{
-    background-color: rgb(7, 255, 110);
-    width: 100%; /* Make div take full width of the td */
-    height: 100%; /* Make div take full height of the td */
-    display: flex; /* Center content */
-    flex-direction: column; /* Stack h1 and p vertically */
-    justify-content: center; /* Vertically center content */
-    align-items: center; /* Horizontally center content */
-    padding: 10px; /* Optional padding inside the div */
-    border-radius: 20px; /* Match td border radius */
+.achievements td:hover{
+    transform: scale(1.1);
 }
 
-.specs h1{
-     
+.achievements td:hover .description{
+    display: block;
+    text-align: left;
+    opacity: 100;
 }
+
+.achievements td:hover .specs h1, .achievements td:hover .achievement{
+    transform: translateX(20000px);
+    display: none;
+}
+
+.specs h1, .achievement{
+    transition: transform 0.3s ease, display 3s ease;
+}
+
+
+.specs{
+    min-width: 25vw;
+    padding: 10px; 
+    border-radius: 20px; 
+    font-family: "Roboto", sans-serif; 
+}
+
+.description{
+    display: none; 
+    width: 20vw;
+    opacity: 0;
+    padding: auto;
+    margin: auto;
+    
+}
+
 
 .profile figcaption {
     font-size: 1.2rem;
@@ -76,7 +92,6 @@
     margin-top: 10px;
 }
 
-/* Skills section */
 .skills {
     background-color: #333;
     color: white;
@@ -133,6 +148,14 @@
         display:contents
     }
 
+    .profile {
+        margin: auto;
+    }
+
+    .about{
+        height: auto;
+    }
+
     .profile img {
         width: 300px;
         height: 300px;
@@ -143,9 +166,21 @@
         height: 25vh;
     }
 
+    .specs{
+        min-width: 30vw;
+    }
+
     .achievements td{
-        padding: 20px 20vw;
-    }   
+        padding: 5px 2vw;
+    } 
+    
+    .description{
+        width: 35vw;
+    }
+
+    .achievements{
+        border-spacing: 4vw 2vw;
+    }
 }
 
 
@@ -166,5 +201,9 @@
 
     .about h1, .skills h2 {
         font-size: 2rem;
+    }
+
+    .achievements{
+        border-spacing: 4vw 3.5vw;
     }
 }
