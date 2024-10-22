@@ -3,40 +3,76 @@
 .about {
     text-align: center;
     padding: 50px 0;
-    background-color: #f4f4f9;
+    height: 80vh;
+    background: url('../Static/HeroCover.jpg') no-repeat center center/cover;
 }
 
-.about h1 {
-    font-size: 2.5rem;
+.head {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
     margin-bottom: 20px;
 }
 
-.bio {
-    font-size: 1.2rem;
-    color: #555;
-    max-width: 800px;
-    margin: 20px auto;
-    line-height: 1.8;
+.info{
+    display: flex;
+    background-color: pink;
 }
 
 /* Profile section styling */
 .profile {
-    margin: 20px auto;
+    margin: auto auto;
     text-align: center;
+    background-color: #ff5722;
+
 }
 
 .profile img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    height: 400px;
     object-fit: cover;
     object-position: top;
 }
 
+.achievements{
+    color: black;
+    margin-right: auto;
+    margin: 100px auto;
+    background-color: #a70303;
+    border-spacing: 3vw 1vw;
+    table-layout: fixed;
+}
+
+.achievements tr{
+    margin: 20px;
+}
+
+.achievements td{
+    /* padding: 10vh 15vw; */
+    padding: 0;
+    background-color: aqua;
+    border-radius: 20px;
+} 
+
+.specs{
+    background-color: rgb(7, 255, 110);
+    width: 100%; /* Make div take full width of the td */
+    height: 100%; /* Make div take full height of the td */
+    display: flex; /* Center content */
+    flex-direction: column; /* Stack h1 and p vertically */
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    padding: 10px; /* Optional padding inside the div */
+    border-radius: 20px; /* Match td border radius */
+}
+
+.specs h1{
+     
+}
+
 .profile figcaption {
     font-size: 1.2rem;
-    color: #333;
+    color: #FFF;
     margin-top: 10px;
 }
 
@@ -91,6 +127,28 @@
 }
 
 /* Responsive Design */
+
+@media (max-width: 1300px) {
+    .info{
+        display:contents
+    }
+
+    .profile img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .achievements{
+        margin: 10px auto;
+        height: 25vh;
+    }
+
+    .achievements td{
+        padding: 20px 20vw;
+    }   
+}
+
+
 @media (max-width: 768px) {
     .skills-row {
         flex-direction: column;
@@ -102,8 +160,8 @@
     }
 
     .profile img {
-        width: 150px;
-        height: 150px;
+        width: 250px;
+        height: 250px;
     }
 
     .about h1, .skills h2 {
