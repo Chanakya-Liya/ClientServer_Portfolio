@@ -50,20 +50,76 @@ nav {
     border-radius: 4px;
 }
 
+@keyframes border-animation {
+    0% {
+        border: 2px solid #50f3ffc7; 
+        color: #50f3ff;
+    }
+    10% {
+        border: 2px solid #ff6f61; 
+        color: #ff6f61;
+    }
+    20% {
+        border: 2px solid #ffcc00; 
+        color: #ffcc00;
+    }
+    30% {
+        border: 2px solid #6b5b95; 
+        color: #6b5b95;
+    }
+    40% {
+        border: 2px solid #88d8b0;
+        color: #88d8b0; 
+    }
+    50% {
+        border: 2px solid #ff3d00; 
+        color: #ff3d00;
+    }
+    60% {
+        border: 2px solid #9c27b0; 
+        color: #9c27b0;
+    }
+    70% {
+        border: 2px solid #4caf50; 
+        color: #4caf50;
+    }
+    80% {
+        border: 2px solid #3f51b5; 
+        color: #3f51b5;
+    }
+    90% {
+        border: 2px solid #ffeb3b; 
+        color: #ffeb3b;
+    }
+    100% {
+        border: 2px solid #50f3ffc7;
+        color: #ffffff; 
+    }
+}
+
+@keyframes pause-animation {
+    0% {
+        border: 2px solid #50f3ffc7; 
+    }
+    100% {
+        border: 2px solid #50f3ffc7; 
+    }
+}
+
 .signup-btn a {
     display: inline-block;
     background-color: #50f3ffc7;
     padding: 10px 20px;
-    color: #000000;
+    color: #ffffff;
     border-radius: 4px;
-    cursor: pointer;
+    animation: border-animation 0.00001s linear forwards;
     transition: background-color 0.3s ease, transform 0.3s ease, border-radius 1 ease;
 }
 
 .signup-btn a:hover {
-    padding: 8px 18px;
-    border: #019ea9 solid 2px;
+    padding: 10px 20px;
     background-color: #1F1F1F;
+    animation: border-animation 10s linear infinite alternate-reverse;
 }
 
 footer {
