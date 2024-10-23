@@ -1,81 +1,145 @@
-/* About Page Specific Styles */
-
 .about {
     text-align: center;
     padding: 50px 0;
-    background-color: #f4f4f9;
+    height: 80vh;
+    background: url('../Static/HeroCover.jpg') no-repeat center center/cover;
 }
 
-.about h1 {
-    font-size: 2.5rem;
+.head {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
     margin-bottom: 20px;
 }
 
-.bio {
-    font-size: 1.2rem;
-    color: #555;
-    max-width: 800px;
-    margin: 20px auto;
-    line-height: 1.8;
+.info{
+    display: flex;
 }
 
-/* Profile section styling */
 .profile {
-    margin: 20px auto;
+    margin: auto auto auto 7%;
     text-align: center;
+    transition: transform 0.5s ease;
 }
 
-.profile img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+.profile .profile-image:hover{
+    transform: rotateY(180deg);
+    background-image: url(../Static/flip\ photo.png);
+}
+
+.profile .profile-image {
+    background-image: url(../Static/New\ Project.png);
+    width: 400px;
+    height: 400px;
+    background-size: cover;
+    background-position: top;
     object-fit: cover;
     object-position: top;
+    transition: transform 0.3s ease, background-image 0.1s ease;
 }
 
 .profile figcaption {
-    font-size: 1.2rem;
-    color: #333;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "Roboto", sans-serif;
+    color: #FFF;
     margin-top: 10px;
 }
 
-/* Skills section */
+
+.achievements{
+    color: black;
+    margin-right: auto;
+    margin: 100px auto;
+    border-spacing: 3vw 1vw;
+    table-layout: fixed;
+}
+
+.achievements tr{
+    margin: 20px;
+    transition: transform 3s ease;
+}
+
+.achievements td{
+    /* padding: 10vh 15vw; */
+    padding: 0;
+    background-color: aqua;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+} 
+
+.achievements td:hover{
+    transform: scale(1.1);
+}
+
+.achievements td:hover .description{
+    display: block;
+    text-align: center;
+}
+
+.achievements td:hover .specs h1, .achievements td:hover .achievement{
+    display: none;
+}
+
+.specs h1, .achievement{
+    transition: transform 0.3s ease, display 3s ease;
+}
+
+
+.specs{
+    min-width: 25vw;
+    padding: 10px; 
+    border-radius: 20px; 
+    font-family: "Roboto", sans-serif; 
+}
+
+.description{
+    display: none; 
+    width: 20vw;
+    padding: auto;
+    margin: auto;
+    
+}
+
+
+/* end of hero section */
+
 .skills {
-    background-color: #333;
+    background-color: #000000;
     color: white;
     padding: 50px 0;
     text-align: center;
 }
 
 .skills h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 20px;
+    transition: color 0.3s ease;
 }
 
-/* Flexbox layout for skill rows */
+.skills h2:hover {
+    color: #019ea9;
+}
+
 .skills-row {
     display: flex;
     justify-content: space-around;
     margin-bottom: 30px;
 }
 
-/* Skill Progress Bar Container */
 .skill {
     width: 45%;
     text-align: left;
 }
 
-/* Skill label positioned above the progress bar */
 .skill label {
     display: block;
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
-/* Progress Bar Styling */
 .progress-bar {
-    background-color: #555;
+    background-color: #ffffff;
     border-radius: 20px;
     overflow: hidden;
     height: 25px;
@@ -84,29 +148,96 @@
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-.progress {
-    background-color: #ff5722;
-    height: 100%;
-    transition: width 0.5s ease;
+.progress-percentage{
+    opacity: 0;
+    color: rgb(255, 255, 255);
+    font-size: large;
+    text-align: right;
+    padding: 0 20px;
+    transition: opacity 0.3s ease-in;
 }
 
-/* Responsive Design */
+.progress {
+    background-color: #019ea9;
+    height: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.progress:hover{
+    background-color: #3e8f97;
+}
+
+.skill:hover .progress-percentage{
+    opacity: 1;
+}
+
+@media (max-width: 1300px) {
+    .info{
+        display:contents
+    }
+
+    .profile {
+        margin: auto;
+    }
+
+    .about{
+        height: auto;
+    }
+
+    .profile .profile-image {
+        width: 300px;
+        height: 300px;
+        margin: auto;
+    }
+
+    .achievements{
+        margin: 10px auto;
+        height: 25vh;
+    }
+
+    .specs{
+        min-width: 30vw;
+    }
+
+    .achievements td{
+        padding: 5px 2vw;
+    } 
+    
+    .description{
+        width: 35vw;
+    }
+
+    .achievements{
+        border-spacing: 4vw 2vw;
+    }
+
+    .progress-percentage{
+        opacity: 1;
+    }
+}
+
+
 @media (max-width: 768px) {
     .skills-row {
-        flex-direction: column;
+        /* flex-direction: column; */
+        margin: auto 5%;
     }
 
     .skill {
         width: 100%;
-        margin-bottom: 20px;
+        margin: 10px 10px;
     }
 
-    .profile img {
-        width: 150px;
-        height: 150px;
+    .profile .profile-image {
+        width: 250px;
+        height: 250px;
     }
 
     .about h1, .skills h2 {
         font-size: 2rem;
+    }
+
+    .achievements{
+        border-spacing: 4vw 3.5vw;
     }
 }
