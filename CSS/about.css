@@ -80,7 +80,7 @@
   transition: transform 0.5s ease;
 }
 
-.profile .profile-image:hover {
+.profile:hover .profile-image {
   transform: rotateY(180deg);
   background-image: url(../Static/flip\ photo.png);
 }
