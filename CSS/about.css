@@ -143,19 +143,19 @@
   animation: content-disappear 0.3s ease-in both;
 }
 
-tr:first-child td:first-child .specs p:nth-child(2)::after {
+tr:first-child td:first-child .specs p::after {
   content: "Years of Experience";
 }
 
-tr:first-child td:nth-child(2) .specs p:nth-child(2)::after {
+tr:first-child td:nth-child(2) .specs p::after {
   content: "Courses Completed";
 }
 
-tr:last-child td:first-child .specs p:nth-child(2)::after {
+tr:last-child td:first-child .specs p::after {
   content: "Skills";
 }
 
-tr:last-child td:nth-child(2) .specs p:nth-child(2)::after {
+tr:last-child td:nth-child(2) .specs p::after {
   content: "Year Computer Science Student";
 }
 
@@ -164,19 +164,19 @@ td:hover .specs p {
   animation: content-appear 0.2s linear forwards;
 }
 
-tr:first-child td:first-child:hover .specs p:nth-child(2)::after {
+tr:first-child td:first-child:hover .specs p::after {
   content: "Gained valuable insights through practical industry exposure.";
 }
 
-tr:first-child td:last-child:hover .specs p:nth-child(2)::after {
+tr:first-child td:last-child:hover .specs p::after {
   content: "Completed multiple courses to enhance my knowledge base.";
 }
 
-tr:last-child td:first-child:hover .specs p:nth-child(2)::after {
+tr:last-child td:first-child:hover .specs p::after {
   content: "Acquired a diverse skill set to solve complex challenges.";
 }
 
-tr:last-child td:nth-child(2):hover .specs p:nth-child(2)::after {
+tr:last-child td:nth-child(2):hover .specs p::after {
   content: "Currently pursuing a degree with a focus on programming.";
 }
 
