@@ -70,33 +70,114 @@
   transform: scale(1.1);
 }
 
-.achievements td:hover .specs h1,
-.achievements td:hover .achievement {
-  display: none;
+@keyframes content-disappear{
+    0%{
+       transform: translateY(0);
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
 }
 
-.specs h1,
-.achievement {
-  transition: transform 0.3s ease, display 3s ease;
+@keyframes content-appear{
+    0%{
+       opacity: 0;
+    }
+    25%{
+        opacity: 0.25;
+    }
+    50%{
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes content-appear-smaller-screen{
+    0%{
+       opacity: 0;
+    }
+    25%{
+        opacity: 0.25;
+    }
+    50%{
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-35px);
+    }
 }
 
 .specs {
-  min-width: 25vw;
-  padding: 10px;
-  border-radius: 20px;
+    width: 25vw;
+    padding: 10px;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+  }
+
+.specs h1{
+  transition: transform 0.3s ease, display 3s ease;
 }
 
-.description {
-  display: none;
-  width: 20vw;
-  padding: auto;
-  margin: auto;
-  font-size: 1.2rem;
+.achievements td:hover .specs > h1 {
+  animation: content-disappear 0.3s ease-in both;
 }
 
-.achievements td:hover .description {
-  display: block;
-  text-align: center;
+tr:first-child td:first-child .specs p:nth-child(2)::after{
+    content: 'Years of Experience';
+}
+
+tr:first-child td:nth-child(2) .specs p:nth-child(2)::after{
+    content: 'Courses Completed';
+}
+
+tr:last-child td:first-child .specs p:nth-child(2)::after{
+    content: 'Skills';
+}
+
+tr:last-child td:nth-child(2) .specs p:nth-child(2)::after{
+    content: 'Year Computer Science Student';
+}
+
+td:hover .specs p{
+    font-size: 1.2rem;
+    animation: content-appear 0.2s linear forwards;
+}
+
+tr:first-child td:first-child:hover .specs p:nth-child(2)::after{
+    content: 'Gained valuable insights through practical industry exposure.';
+}
+
+tr:first-child td:last-child:hover .specs p:nth-child(2)::after{
+    content: 'Completed multiple courses to enhance my knowledge base.';
+}
+
+tr:last-child td:first-child:hover .specs p:nth-child(2)::after{
+    content: 'Acquired a diverse skill set to solve complex challenges.';
+}
+
+tr:last-child td:nth-child(2):hover .specs p:nth-child(2)::after{
+    content: 'Currently pursuing a degree with a focus on programming.';
 }
 
 /* end of hero section */
@@ -193,15 +274,11 @@
   }
 
   .specs {
-    min-width: 30vw;
+    width: 30vw;
   }
 
   .achievements td {
     padding: 5px 2vw;
-  }
-
-  .description {
-    width: 35vw;
   }
 
   .achievements {
@@ -215,7 +292,6 @@
 
 @media (max-width: 768px) {
   .skills-row {
-    /* flex-direction: column; */
     margin: auto 5%;
   }
 
@@ -238,8 +314,18 @@
     border-spacing: 4vw 3.5vw;
   }
 
-  .description {
-    font-size: 1rem;
-    width: 20vw;
+  .specs {
+    width: 30vw;
   }
+
+  .specs p {
+    font-size: 1rem;
+    width: 30vw;
+  }
+
+  td:hover .specs p{
+    font-size: 0.9rem;
+    font-weight: bold;
+    animation: content-appear-smaller-screen 0.2s linear forwards;
+}
 }
