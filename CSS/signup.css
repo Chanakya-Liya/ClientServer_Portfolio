@@ -1,98 +1,106 @@
 .signup {
-    text-align: center;
-    padding: 50px 0;
-    background: url('../Static/HeroCover.jpg') no-repeat center center/cover;
-    height: auto;
-    min-height: 80vh;
+  text-align: center;
+  padding: 50px 0;
+  background: url("../Static/HeroCover.jpg") no-repeat center center/cover;
+  height: auto;
+  min-height: 80vh;
 }
 
 .signup h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: white;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
 }
 
 .signup p {
-    font-size: 1.8rem;
-    color: #cfcfcf;
-    max-width: 800px;
-    margin: 0 auto 40px;
-    line-height: 1.6;
+  font-size: 1.8rem;
+  color: #cfcfcf;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
 }
 
 /* Form Styling */
 form {
-    max-width: 600px;
-    margin: 0 auto;
-    background: rgb(22, 22, 22);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border: 2px solid #019ea9;
-    color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgb(22, 22, 22);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #019ea9;
+  color: white;
 }
 
 .form-group {
-    margin-bottom: 15px;
-    text-align: left;
-    padding-right: 20px;
+  margin-bottom: 15px;
+  text-align: left;
+  padding-right: 20px;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .form-group input,
 .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #019ea9b7;
-    border-radius: 4px;
-    background-color: #000000;
-    color: white;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #019ea9b7;
+  border-radius: 4px;
+  background-color: #000000;
+  color: white;
 }
 
-input:valid{
-    border-color: green;
+input:valid {
+  border-color: green;
 }
 
-::placeholder{
-    color: #ffffffa8;
+input:empty {
+  border-color: #019ea9b7;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+::placeholder {
+  color: #ffffffa8;
 }
 
 .form-group textarea {
-    height: 100px; 
-    resize: none; 
+  height: 100px;
+  resize: none;
 }
 
 button {
-    background-color: #019ea9;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-weight: bold;
+  background-color: #019ea9;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
 }
 
 button:hover {
-    background-color: #50f3ffc7; 
-    color: black;
+  background-color: #50f3ffc7;
+  color: black;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .signup p {
-        font-size: 1.6rem;
-        margin: 0 20px 40px;
-    }
+  .signup p {
+    font-size: 1.6rem;
+    margin: 0 20px 40px;
+  }
 }
 
 @media (max-width: 700px) {
-    form{
-        margin: 0 20px;
-    }
+  form {
+    margin: 0 20px;
+  }
 }

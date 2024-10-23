@@ -1,246 +1,245 @@
 .about {
-    text-align: center;
-    padding: 50px 0;
-    height: 80vh;
-    background: url('../Static/HeroCover.jpg') no-repeat center center/cover;
+  text-align: center;
+  padding: 50px 0;
+  height: 80vh;
+  background: url("../Static/HeroCover.jpg") no-repeat center center/cover;
 }
 
 .head {
-    font-size: 3rem;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 20px;
 }
 
-.info{
-    display: flex;
+.info {
+  display: flex;
 }
 
 .profile {
-    margin: auto auto auto 7%;
-    text-align: center;
-    transition: transform 0.5s ease;
+  margin: auto auto auto 7%;
+  text-align: center;
+  transition: transform 0.5s ease;
 }
 
-.profile .profile-image:hover{
-    transform: rotateY(180deg);
-    background-image: url(../Static/flip\ photo.png);
+.profile .profile-image:hover {
+  transform: rotateY(180deg);
+  background-image: url(../Static/flip\ photo.png);
 }
 
 .profile .profile-image {
-    background-image: url(../Static/New\ Project.png);
-    width: 400px;
-    height: 400px;
-    background-size: cover;
-    background-position: top;
-    object-fit: cover;
-    object-position: top;
-    transition: transform 0.3s ease, background-image 0.1s ease;
+  background-image: url(../Static/New\ Project.png);
+  width: 400px;
+  height: 400px;
+  background-size: cover;
+  background-position: top;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.3s ease, background-image 0.1s ease;
 }
 
 .profile figcaption {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #FFF;
-    margin: 2em 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 2em 0;
 }
 
-
-.achievements{
-    color: black;
-    margin-right: auto;
-    margin: 100px auto;
-    border-spacing: 3vw 1vw;
-    table-layout: fixed;
+.achievements {
+  color: black;
+  margin-right: auto;
+  margin: 100px auto;
+  border-spacing: 3vw 1vw;
+  table-layout: fixed;
 }
 
-.achievements tr{
-    margin: 20px;
-    transition: transform 3s ease;
+.achievements tr {
+  margin: 20px;
+  transition: transform 3s ease;
 }
 
-.achievements td{
-    /* padding: 10vh 15vw; */
-    padding: 0;
-    background-color: aqua;
-    border-radius: 20px;
-    transition: transform 0.3s ease;
-} 
-
-.achievements td:hover{
-    transform: scale(1.1);
+.achievements td {
+  /* padding: 10vh 15vw; */
+  padding: 0;
+  background-color: aqua;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
 }
 
-.achievements td:hover .specs h1, .achievements td:hover .achievement{
-    display: none;
+.achievements td:hover {
+  transform: scale(1.1);
 }
 
-.specs h1, .achievement{
-    transition: transform 0.3s ease, display 3s ease;
+.achievements td:hover .specs h1,
+.achievements td:hover .achievement {
+  display: none;
 }
 
-
-.specs{
-    min-width: 25vw;
-    padding: 10px; 
-    border-radius: 20px; 
+.specs h1,
+.achievement {
+  transition: transform 0.3s ease, display 3s ease;
 }
 
-.description{
-    display: none; 
-    width: 20vw;
-    padding: auto;
-    margin: auto;
-    font-size: 1.2rem;
+.specs {
+  min-width: 25vw;
+  padding: 10px;
+  border-radius: 20px;
 }
 
-.achievements td:hover .description{
-    display: block;
-    text-align: center;
+.description {
+  display: none;
+  width: 20vw;
+  padding: auto;
+  margin: auto;
+  font-size: 1.2rem;
 }
 
+.achievements td:hover .description {
+  display: block;
+  text-align: center;
+}
 
 /* end of hero section */
 
 .skills {
-    background-color: #000000;
-    color: white;
-    padding: 50px 0;
-    text-align: center;
+  background-color: #000000;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
 }
 
 .skills h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    transition: color 0.3s ease;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
 }
 
 .skills h2:hover {
-    color: #019ea9;
+  color: #019ea9;
 }
 
 .skills-row {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
 }
 
 .skill {
-    width: 45%;
-    text-align: left;
+  width: 45%;
+  text-align: left;
 }
 
 .skill label {
-    display: block;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
 .progress-bar {
-    background-color: #ffffff;
-    border-radius: 20px;
-    overflow: hidden;
-    height: 25px;
-    width: 100%;
-    margin: 0 auto;
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 25px;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-.progress-percentage{
-    opacity: 0;
-    color: rgb(255, 255, 255);
-    font-size: large;
-    text-align: right;
-    padding: 0 20px;
-    transition: opacity 0.3s ease-in;
+.progress-percentage {
+  opacity: 0;
+  color: rgb(255, 255, 255);
+  font-size: large;
+  text-align: right;
+  padding: 0 20px;
+  transition: opacity 0.3s ease-in;
 }
 
 .progress {
-    background-color: #019ea9;
-    height: 100%;
-    transition: background-color 0.3s ease;
+  background-color: #019ea9;
+  height: 100%;
+  transition: background-color 0.3s ease;
 }
 
-.progress:hover{
-    background-color: #3e8f97;
+.progress:hover {
+  background-color: #3e8f97;
 }
 
-.skill:hover .progress-percentage{
-    opacity: 1;
+.skill:hover .progress-percentage {
+  opacity: 1;
 }
 
 @media (max-width: 1300px) {
-    .info{
-        display:contents
-    }
+  .info {
+    display: contents;
+  }
 
-    .profile {
-        margin: auto;
-    }
+  .profile {
+    margin: auto;
+  }
 
-    .about{
-        height: auto;
-    }
+  .about {
+    height: auto;
+  }
 
-    .profile .profile-image {
-        width: 300px;
-        height: 300px;
-        margin: auto;
-    }
+  .profile .profile-image {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+  }
 
-    .achievements{
-        margin: 10px auto;
-        height: 25vh;
-    }
+  .achievements {
+    margin: 10px auto;
+    height: 25vh;
+  }
 
-    .specs{
-        min-width: 30vw;
-    }
+  .specs {
+    min-width: 30vw;
+  }
 
-    .achievements td{
-        padding: 5px 2vw;
-    } 
-    
-    .description{
-        width: 35vw;
-    }
+  .achievements td {
+    padding: 5px 2vw;
+  }
 
-    .achievements{
-        border-spacing: 4vw 2vw;
-    }
+  .description {
+    width: 35vw;
+  }
 
-    .progress-percentage{
-        opacity: 1;
-    }
+  .achievements {
+    border-spacing: 4vw 2vw;
+  }
+
+  .progress-percentage {
+    opacity: 1;
+  }
 }
 
-
 @media (max-width: 768px) {
-    .skills-row {
-        /* flex-direction: column; */
-        margin: auto 5%;
-    }
+  .skills-row {
+    /* flex-direction: column; */
+    margin: auto 5%;
+  }
 
-    .skill {
-        width: 100%;
-        margin: 10px 10px;
-    }
+  .skill {
+    width: 100%;
+    margin: 10px 10px;
+  }
 
-    .profile .profile-image {
-        width: 250px;
-        height: 250px;
-    }
+  .profile .profile-image {
+    width: 250px;
+    height: 250px;
+  }
 
-    .about h1, .skills h2 {
-        font-size: 2rem;
-    }
+  .about h1,
+  .skills h2 {
+    font-size: 2rem;
+  }
 
-    .achievements{
-        border-spacing: 4vw 3.5vw;
-    }
+  .achievements {
+    border-spacing: 4vw 3.5vw;
+  }
 
-    .description{
-        font-size: 1rem;
-        width: 20vw;
-    }
+  .description {
+    font-size: 1rem;
+    width: 20vw;
+  }
 }
