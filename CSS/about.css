@@ -41,7 +41,6 @@
 .profile figcaption {
     font-size: 1.5rem;
     font-weight: bold;
-    font-family: "Roboto", sans-serif;
     color: #FFF;
     margin-top: 10px;
 }
@@ -72,11 +71,6 @@
     transform: scale(1.1);
 }
 
-.achievements td:hover .description{
-    display: block;
-    text-align: center;
-}
-
 .achievements td:hover .specs h1, .achievements td:hover .achievement{
     display: none;
 }
@@ -90,7 +84,6 @@
     min-width: 25vw;
     padding: 10px; 
     border-radius: 20px; 
-    font-family: "Roboto", sans-serif; 
 }
 
 .description{
@@ -98,7 +91,11 @@
     width: 20vw;
     padding: auto;
     margin: auto;
-    
+}
+
+.achievements td:hover .description{
+    display: block;
+    text-align: center;
 }
 
 

@@ -1,5 +1,8 @@
-nav {
+body{
     font-family: "Roboto", sans-serif;
+}
+
+nav {
     font-weight: 500;
     font-style: normal;
     margin: 0;
