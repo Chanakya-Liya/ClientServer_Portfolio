@@ -44,6 +44,11 @@
     transition: transform 0.3s ease;
 }
 
+.project-card[target]{
+    background-color: rgb(51, 51, 51); 
+    color: white;
+}
+
 .project-card:hover {
     transform: scale(1.05);
     border: 1px solid white; 
