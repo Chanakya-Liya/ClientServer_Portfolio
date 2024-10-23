@@ -70,72 +70,72 @@
   transform: scale(1.1);
 }
 
-@keyframes content-disappear{
-    0%{
-       transform: translateY(0);
-    }
-    25%{
-        opacity: 0;
-    }
-    50%{
-        opacity: 0;
-    }
-    75%{
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(-50px);
-        opacity: 0;
-    }
+@keyframes content-disappear {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
 }
 
-@keyframes content-appear{
-    0%{
-       opacity: 0;
-    }
-    25%{
-        opacity: 0.25;
-    }
-    50%{
-        transform: translateY(0);
-        opacity: 0.5;
-    }
-    75%{
-        opacity: 1;
-    }
-    100%{
-        transform: translateY(-20px);
-    }
+@keyframes content-appear {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-20px);
+  }
 }
 
-@keyframes content-appear-smaller-screen{
-    0%{
-       opacity: 0;
-    }
-    25%{
-        opacity: 0.25;
-    }
-    50%{
-        transform: translateY(0);
-        opacity: 0.5;
-    }
-    75%{
-        opacity: 1;
-    }
-    100%{
-        transform: translateY(-35px);
-    }
+@keyframes content-appear-smaller-screen {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-35px);
+  }
 }
 
 .specs {
-    width: 25vw;
-    padding: 10px;
-    border-radius: 20px;
-    transition: transform 0.3s ease;
-  }
+  width: 25vw;
+  padding: 10px;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+}
 
-.specs h1{
+.specs h1 {
   transition: transform 0.3s ease, display 3s ease;
 }
 
@@ -143,41 +143,41 @@
   animation: content-disappear 0.3s ease-in both;
 }
 
-tr:first-child td:first-child .specs p:nth-child(2)::after{
-    content: 'Years of Experience';
+tr:first-child td:first-child .specs p:nth-child(2)::after {
+  content: "Years of Experience";
 }
 
-tr:first-child td:nth-child(2) .specs p:nth-child(2)::after{
-    content: 'Courses Completed';
+tr:first-child td:nth-child(2) .specs p:nth-child(2)::after {
+  content: "Courses Completed";
 }
 
-tr:last-child td:first-child .specs p:nth-child(2)::after{
-    content: 'Skills';
+tr:last-child td:first-child .specs p:nth-child(2)::after {
+  content: "Skills";
 }
 
-tr:last-child td:nth-child(2) .specs p:nth-child(2)::after{
-    content: 'Year Computer Science Student';
+tr:last-child td:nth-child(2) .specs p:nth-child(2)::after {
+  content: "Year Computer Science Student";
 }
 
-td:hover .specs p{
-    font-size: 1.2rem;
-    animation: content-appear 0.2s linear forwards;
+td:hover .specs p {
+  font-size: 1.2rem;
+  animation: content-appear 0.2s linear forwards;
 }
 
-tr:first-child td:first-child:hover .specs p:nth-child(2)::after{
-    content: 'Gained valuable insights through practical industry exposure.';
+tr:first-child td:first-child:hover .specs p:nth-child(2)::after {
+  content: "Gained valuable insights through practical industry exposure.";
 }
 
-tr:first-child td:last-child:hover .specs p:nth-child(2)::after{
-    content: 'Completed multiple courses to enhance my knowledge base.';
+tr:first-child td:last-child:hover .specs p:nth-child(2)::after {
+  content: "Completed multiple courses to enhance my knowledge base.";
 }
 
-tr:last-child td:first-child:hover .specs p:nth-child(2)::after{
-    content: 'Acquired a diverse skill set to solve complex challenges.';
+tr:last-child td:first-child:hover .specs p:nth-child(2)::after {
+  content: "Acquired a diverse skill set to solve complex challenges.";
 }
 
-tr:last-child td:nth-child(2):hover .specs p:nth-child(2)::after{
-    content: 'Currently pursuing a degree with a focus on programming.';
+tr:last-child td:nth-child(2):hover .specs p:nth-child(2)::after {
+  content: "Currently pursuing a degree with a focus on programming.";
 }
 
 /* end of hero section */
@@ -323,9 +323,9 @@ tr:last-child td:nth-child(2):hover .specs p:nth-child(2)::after{
     width: 30vw;
   }
 
-  td:hover .specs p{
+  td:hover .specs p {
     font-size: 0.9rem;
     font-weight: bold;
     animation: content-appear-smaller-screen 0.2s linear forwards;
-}
+  }
 }
