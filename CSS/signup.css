@@ -54,18 +54,22 @@ form {
   color: white;
 }
 
+/* Add green border when input is valid */
 input:valid {
   border-color: green;
 }
 
+/* Add original border when input is empty */
 input:empty {
   border-color: #019ea9b7;
 }
 
+/* Add red border when input is invalid */
 input:invalid {
   border-color: red;
 }
 
+/* Placeholder Styling */
 ::placeholder {
   color: #ffffffa8;
 }
@@ -86,6 +90,7 @@ button {
   font-weight: bold;
 }
 
+/* Change button color when hovered */
 button:hover {
   background-color: #50f3ffc7;
   color: black;
