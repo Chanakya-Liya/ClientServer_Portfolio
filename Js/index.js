@@ -15,7 +15,7 @@ function typeText() {
       0,
       document.getElementById("typing-text").textContent.length - 1
     );
-  // If the text is not being deleted, add the next character
+    // If the text is not being deleted, add the next character
   } else {
     document.getElementById("typing-text").textContent = currentText.substring(
       0,
@@ -33,7 +33,7 @@ function typeText() {
   ) {
     delta = 1500; // Delay after typing
     isDeleting = true;
-  // If the text has been deleted and is not being typed, move to the next string
+    // If the text has been deleted and is not being typed, move to the next string
   } else if (
     isDeleting &&
     document.getElementById("typing-text").textContent === ""
