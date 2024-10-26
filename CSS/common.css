@@ -1,7 +1,9 @@
+/* Set the font family for the entire body */
 body {
   font-family: "Roboto", sans-serif;
 }
 
+/* Set the font weight, style, margin, padding, and box-sizing for the nav element */
 nav {
   font-weight: 500;
   font-style: normal;
@@ -10,6 +12,7 @@ nav {
   box-sizing: border-box;
 }
 
+/* Set the display, justify-content, align-items, padding, background-color, position, top, and z-index for the navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -21,11 +24,13 @@ nav {
   z-index: 100;
 }
 
+/* Set the display and gap for the nav-left element */
 .navbar .nav-left {
   display: flex;
   gap: 20px;
 }
 
+/* Set the color, text-decoration, padding, transition, and font-weight for the navbar links */
 .navbar a {
   color: #e0e0e0;
   text-decoration: none;
@@ -34,22 +39,26 @@ nav {
   font-weight: bold;
 }
 
+/* Set the border-radius, border, and color for the active link */
 #active {
   border-radius: 4px;
   border: #019ea9 solid 2px;
   color: white;
 }
 
+/* Set the background-color for the active link on hover */
 #active:hover {
   background-color: #019ea9;
 }
 
+/* Set the background-color, color, and border-radius for the navbar links on hover */
 .navbar a:hover {
   background-color: #019ea9;
   color: #ffffff;
   border-radius: 4px;
 }
 
+/* Set the keyframes for the border-animation */
 @keyframes border-animation {
   0% {
     border: 2px solid #50f3ffc7;
@@ -97,6 +106,7 @@ nav {
   }
 }
 
+/* Set the display, background-color, padding, color, border-radius, animation, and transition for the signup-btn links */
 .signup-btn a {
   display: inline-block;
   background-color: #50f3ffc7;
@@ -108,12 +118,14 @@ nav {
     border-radius 1 ease;
 }
 
+/* Set the padding, background-color, and animation for the signup-btn links on hover */
 .signup-btn a:hover {
   padding: 10px 20px;
   background-color: #1f1f1f;
   animation: border-animation 10s linear infinite alternate-reverse;
 }
 
+/* Set the background-color, color, text-align, padding, margin-top, and font-size for the footer */
 footer {
   background-color: #333;
   color: white;
@@ -123,6 +135,7 @@ footer {
   font-size: 0.9rem;
 }
 
+/* Set the flex-direction, align-items, text-align, position, and flex-direction for the navbar on screens smaller than 489px */
 @media (max-width: 489px) {
   .navbar {
     flex-direction: column;
