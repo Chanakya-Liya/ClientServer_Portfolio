@@ -1,52 +1,60 @@
+/* Signup page styling */
+
+/* main signup section */
 .signup {
-  text-align: center;
+  text-align: center; /* Center-aligns text within the .signup container */
   padding: 50px 0;
-  background: url("../Static/HeroCover.jpg") no-repeat center center/cover;
+  background: url("../Static/HeroCover.jpg") no-repeat center center/cover; /* Sets a background image with full cover */
   height: auto;
-  min-height: 80vh;
+  min-height: 80vh; /* Sets a minimum height for the section */
 }
 
+/* Signup title and description */
 .signup h1 {
   font-size: 2.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Adds vertical spacing below the title */
   color: white;
 }
 
+/* Paragraph styling inside the signup section */
 .signup p {
   font-size: 1.8rem;
   color: #cfcfcf;
-  max-width: 800px;
-  margin: 0 auto 40px;
-  line-height: 1.6;
+  max-width: 800px; /* Limits the width of the description */
+  margin: 0 auto 40px; /* Centers the description and adds vertical spacing */
+  line-height: 1.6; /* Sets the line height of the description */
 }
 
 /* Form Styling */
 form {
-  max-width: 600px;
-  margin: 0 auto;
+  max-width: 600px; /* Limits the width of the form */
+  margin: 0 auto; /* Centers the form */
   background: rgb(22, 22, 22);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow to the form */
   border: 2px solid #019ea9;
   color: white;
 }
 
+/* Form Group Styling */
 .form-group {
   margin-bottom: 15px;
   text-align: left;
   padding-right: 20px;
 }
 
+/* Form labels styling */
 .form-group label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
 
+/* Styling for text inputs and textarea within form */
 .form-group input,
 .form-group textarea {
-  width: 100%;
+  width: 100%; /* Makes the input field take up the full width of the form group */
   padding: 10px;
   border: 1px solid #019ea9b7;
   border-radius: 4px;
@@ -74,19 +82,21 @@ input:invalid {
   color: #ffffffa8;
 }
 
+/* Textarea-specific styling */
 .form-group textarea {
-  height: 100px;
-  resize: none;
+  height: 100px; /* Sets the height of the textarea */
+  resize: none; /* Disables the ability to resize the textarea */
 }
 
+/* Button styling */
 button {
   background-color: #019ea9;
   color: white;
   padding: 10px 15px;
-  border: none;
+  border: none; /* Removes the border of the button */
   border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+  transition: background-color 0.3s; /* Adds a smooth transition effect to the background color */
   font-weight: bold;
 }
 
@@ -100,12 +110,12 @@ button:hover {
 @media (max-width: 768px) {
   .signup p {
     font-size: 1.6rem;
-    margin: 0 20px 40px;
+    margin: 0 20px 40px; /* Centers the description and adds vertical spacing */
   }
 }
 
 @media (max-width: 700px) {
   form {
-    margin: 0 20px;
+    margin: 0 20px; /* Centers the form on smaller screens */
   }
 }
