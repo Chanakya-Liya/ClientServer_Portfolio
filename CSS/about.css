@@ -97,7 +97,7 @@
 
 /* Initial profile image settings with background image */
 .profile .profile-image {
-  background-image: url(../Static/New\ Project.png); /* Set the initial background image */
+  background-image: url(../Static/About\ Page\ Photo.png); /* Set the initial background image */
   width: 400px;
   height: 400px;
   background-size: cover; /* Scale the background image to cover the container */
