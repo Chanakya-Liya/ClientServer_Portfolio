@@ -1,3 +1,6 @@
+/* About page styling */
+
+/* Animation for disappearing content with upward movement */
 @keyframes content-disappear {
   0% {
     transform: translateY(0);
@@ -18,6 +21,7 @@
   }
 }
 
+/* Animation for appearing content with slight upward movement */
 @keyframes content-appear {
   0% {
     opacity: 0;
@@ -37,6 +41,7 @@
   }
 }
 
+/* Animation for appearing content on smaller screens */
 @keyframes content-appear-smaller-screen {
   0% {
     opacity: 0;
@@ -56,13 +61,15 @@
   }
 }
 
+/* About section styling with centered content and background image */
 .about {
-  text-align: center;
-  padding: 50px 0;
-  height: 80vh;
+  text-align: center; /* Center content */
+  padding: 50px 0; /* Add padding to the top and bottom */
+  height: 80vh; /* Set a fixed height for the section */
   background: url("../Static/HeroCover.jpg") no-repeat center center/cover;
 }
 
+/* Heading styling for main title in the About section */
 .head {
   font-size: 3rem;
   font-weight: bold;
@@ -70,79 +77,91 @@
   margin-bottom: 20px;
 }
 
+/* Layout container for profile and achievement sections */
 .info {
-  display: flex;
+  display: flex; /* Use flexbox to create a row layout */
 }
 
+/* Profile image and container styling */
 .profile {
-  margin: auto auto auto 7%;
-  text-align: center;
-  transition: transform 0.5s ease;
+  margin: auto auto auto 7%; /* Center the profile image and container horizontally */
+  text-align: center; /* Center text */
+  transition: transform 0.5s ease; /* Add a smooth transition effect */
 }
 
+/* Rotating profile image and background change on hover */
 .profile:hover .profile-image {
-  transform: rotateY(180deg);
-  background-image: url(../Static/flip\ photo.png);
+  transform: rotateY(180deg); /* Rotate the image 180 degrees on the Y-axis */
+  background-image: url(../Static/flip\ photo.png); /* Change the background image on hover */
 }
 
+/* Initial profile image settings with background image */
 .profile .profile-image {
-  background-image: url(../Static/New\ Project.png);
+  background-image: url(../Static/New\ Project.png); /* Set the initial background image */
   width: 400px;
   height: 400px;
-  background-size: cover;
-  background-position: top;
-  object-fit: cover;
-  object-position: top;
-  transition: transform 0.3s ease, background-image 0.1s ease;
+  background-size: cover; /* Scale the background image to cover the container */
+  background-position: top; /* Position the background image at the top */
+  object-fit: cover; /* Scale the image to cover the container */
+  object-position: top; /* Position the image at the top */
+  transition: transform 0.3s ease, background-image 0.1s ease; /* Add a smooth transition effect */
 }
 
-.profile figcaption {
+/* Figcaption styling for profile text */
+.profile > figcaption {
   font-size: 1.5rem;
   font-weight: bold;
   color: #fff;
   margin: 2em 0;
 }
 
+/* Achievements table styling with custom spacing and hover effects */
 .achievements {
   color: black;
-  margin-right: auto;
+  margin-right: auto; /* Center the table horizontally */
   margin: 100px auto;
-  border-spacing: 3vw 1vw;
-  table-layout: fixed;
+  border-spacing: 3vw 1vw; /* Add custom spacing between table rows and columns */
+  table-layout: fixed; /* Set table layout to fixed */
 }
 
-.achievements tr {
-  margin: 20px;
-  transition: transform 3s ease;
+/* Transition for table row hover */
+.achievements > tr {
+  margin: 20px; /* Add margin to the table row */
+  transition: transform 3s ease; /* Add a smooth transition effect */
 }
 
+/* Styling for table data cells with background color and hover effect */
 .achievements td {
-  /* padding: 10vh 15vw; */
-  padding: 0;
+  padding: 0; /* Remove default padding */
   background-color: aqua;
   border-radius: 20px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
 }
 
+/* Scale up effect for table cells on hover */
 .achievements td:hover {
   transform: scale(1.1);
 }
 
+/* Specs section inside table cells */
 .specs {
   width: 25vw;
   padding: 10px;
   border-radius: 20px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
 }
 
-.specs h1 {
-  transition: transform 0.3s ease, display 3s ease;
+/* Heading styling for Specs */
+.specs > h1 {
+  transition: transform 0.3s ease, display 3s ease; /* Add a smooth transition effect */
 }
 
+/* Disappear animation for Specs title on cell hover */
 .achievements td:hover .specs > h1 {
   animation: content-disappear 0.3s ease-in both;
 }
 
+/* Adds content for each cell */
 tr:first-child td:first-child .specs p::after {
   content: "Years of Experience";
 }
@@ -159,11 +178,13 @@ tr:last-child td:nth-child(2) .specs p::after {
   content: "Year Computer Science Student";
 }
 
+/* Display additional information when hovering over cells */
 td:hover .specs p {
-  font-size: 1.2rem;
-  animation: content-appear 0.2s linear forwards;
+  font-size: 1.2rem; /* Increase font size */
+  animation: content-appear 0.2s linear forwards; /* Add animation */
 }
 
+/* Change content on hover for each Specs cell */
 tr:first-child td:first-child:hover .specs p::after {
   content: "Gained valuable insights through practical industry exposure.";
 }
@@ -179,76 +200,85 @@ tr:last-child td:first-child:hover .specs p::after {
 tr:last-child td:nth-child(2):hover .specs p::after {
   content: "Currently pursuing a degree with a focus on programming.";
 }
-
 /* end of hero section */
 
+/* Skills section styling */
 .skills {
   background-color: #000000;
   color: white;
   padding: 50px 0;
-  text-align: center;
+  text-align: center; /* Center text horizontally */
 }
 
+/* Main heading in Skills */
 .skills h2 {
   font-size: 3rem;
   margin-bottom: 20px;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease; /* Add a smooth transition effect */
 }
 
 .skills h2:hover {
   color: #019ea9;
 }
 
+/* Layout container for skill progress bars */
 .skills-row {
-  display: flex;
-  justify-content: space-around;
+  display: flex; /* Use flexbox to arrange the skill progress bars */
+  justify-content: space-around; /* Distribute the skill progress bars evenly */
   margin-bottom: 30px;
 }
 
+/* Individual skill styling */
 .skill {
-  width: 45%;
+  width: 45%; /* Set the width of each skill */
   text-align: left;
 }
 
+/* Label styling for each skill */
 .skill label {
   display: block;
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
+/* Progress bar styling */
 .progress-bar {
   background-color: #ffffff;
   border-radius: 20px;
   overflow: hidden;
   height: 25px;
   width: 100%;
-  margin: 0 auto;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  margin: 0 auto; /* Center the progress bar horizontally */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
 }
 
+/* Percentage text that appears on hover */
 .progress-percentage {
-  opacity: 0;
+  opacity: 0; /* Initially hide the percentage text */
   color: rgb(255, 255, 255);
   font-size: large;
   text-align: right;
   padding: 0 20px;
-  transition: opacity 0.3s ease-in;
+  transition: opacity 0.3s ease-in; /* Add a smooth transition effect */
 }
 
+/* Inner progress bar with hover color change */
 .progress {
-  background-color: #019ea9;
+  background: linear-gradient(to right, #019ea9, #00474d);
   height: 100%;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
 }
 
 .progress:hover {
   background-color: #3e8f97;
 }
 
+/* Display skill percentage on hover */
 .skill:hover .progress-percentage {
-  opacity: 1;
+  opacity: 1; /* Show the percentage text on hover */
 }
 
+/* Responsive styles for screens 1300px and below */
 @media (max-width: 1300px) {
   .info {
     display: contents;
@@ -290,6 +320,7 @@ tr:last-child td:nth-child(2):hover .specs p::after {
   }
 }
 
+/* Responsive styles for screens 768px and below */
 @media (max-width: 768px) {
   .skills-row {
     margin: auto 5%;
@@ -325,7 +356,7 @@ tr:last-child td:nth-child(2):hover .specs p::after {
 
   td:hover .specs p {
     font-size: 0.9rem;
-    font-weight: bold;
-    animation: content-appear-smaller-screen 0.2s linear forwards;
+    font-weight: bold; /* Add bold font weight */
+    animation: content-appear-smaller-screen 0.2s linear forwards; /* Change transitional effect on smaller screen */
   }
 }
