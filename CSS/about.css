@@ -108,7 +108,7 @@
 }
 
 /* Figcaption styling for profile text */
-.profile figcaption {
+.profile > figcaption {
   font-size: 1.5rem;
   font-weight: bold;
   color: #fff;
@@ -125,7 +125,7 @@
 }
 
 /* Transition for table row hover */
-.achievements tr {
+.achievements > tr {
   margin: 20px; /* Add margin to the table row */
   transition: transform 3s ease; /* Add a smooth transition effect */
 }
@@ -152,7 +152,7 @@
 }
 
 /* Heading styling for Specs */
-.specs h1 {
+.specs > h1 {
   transition: transform 0.3s ease, display 3s ease; /* Add a smooth transition effect */
 }
 
@@ -264,7 +264,7 @@ tr:last-child td:nth-child(2):hover .specs p::after {
 
 /* Inner progress bar with hover color change */
 .progress {
-  background-color: #019ea9;
+  background: linear-gradient(to right, #019ea9, #00474d);
   height: 100%;
   transition: background-color 0.3s ease; /* Add a smooth transition effect */
 }

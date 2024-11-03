@@ -67,14 +67,9 @@ input:valid {
   border-color: green;
 }
 
-/* Add original border when input is empty */
-input:empty {
-  border-color: #019ea9b7;
-}
-
-/* Add red border when input is invalid */
-input:invalid {
-  border-color: red;
+/* Add red border when input is focus */
+input:focus {
+  color: #019ea9;
 }
 
 /* Placeholder Styling */

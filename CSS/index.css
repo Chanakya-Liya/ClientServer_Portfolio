@@ -13,7 +13,7 @@
 }
 
 /* Main heading in the hero section */
-.hero-content h1 {
+.hero-content > h1 {
   font-size: 5rem;
   margin-bottom: 20px;
   text-transform: uppercase;
